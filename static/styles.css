@@ -1,0 +1,128 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh; 
+    overflow: auto; 
+    position: relative; 
+}
+
+.background-video {
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    min-width: 110%; 
+    min-height: 110%; 
+    width: auto; 
+    height: auto;
+    transform: translate(-50%, -50%); 
+    z-index: -1; 
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8); 
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1; 
+}
+
+h1 {
+    color: #333;
+}
+
+h3 {
+    color: #555;
+}
+
+.form-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form-group {
+    flex: 1 1 45%; 
+    margin: 5px;
+}
+
+label {
+    display: block;
+    margin-bottom: 3px; 
+    color: #333;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="number"],
+input[type="time"],
+input[type="checkbox"],
+input[type="radio"] {
+    width: 100%;
+    padding: 8px; 
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="radio"] {
+    width: auto; 
+    margin-right: 5px; 
+}
+
+input[type="submit"] {
+    background-color: #282ea7;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #608821;
+}
+
+.thank-you {
+    color: #28a745;
+    text-align: center;
+    margin-top: 20px;
+}
+
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="number"]:focus {
+    border-color: #28a745;
+    outline: none;
+    box-shadow: 0 0 5px rgba(40, 167, 69, 0.5);
+}
+
+.error {
+    color: #dc3545;
+    margin-top: 5px;
+}
+
+.navbar {
+    position: absolute;
+    top: 0;
+    margin-top: 0px;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    padding: 0 20px; 
+    z-index: 1; 
+}
+
+.logo {
+    margin-top: 0px;
+    margin-left: 0px;
+    width: 100px; 
+    height: auto; 
+}
+

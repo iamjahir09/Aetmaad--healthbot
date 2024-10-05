@@ -1,0 +1,10 @@
+1. Flask
+2. request
+3. Transformers (if using any transformer model for NLP)
+4. Any additional dependencies as per your requirements.
+5. jsonify
+6. render_template
+7. os
+
+
+

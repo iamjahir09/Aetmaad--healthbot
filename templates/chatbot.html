@@ -1,0 +1,30 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <title>Aetmaad Style Chatbot</title> 
+  <link rel="stylesheet" href="{{ url_for('static', filename='chatbot_style.css') }}">  <!-- CSS file link kar raha hai -->
+  <script src="{{ url_for('static', filename='chatbot.js') }}" defer></script>  <!-- JavaScript file ko link kar raha hai, defer se load hoga -->
+</head>
+<body>
+  <video autoplay muted loop class="background-video">  <!-- Background video ko autoplay, muted, aur loop par set kar raha hai -->
+    <source src="{{ url_for('static',filename ='148756-794599376_tiny (online-video-cutter.com).mp4') }}" type="video/mp4">  <!-- Video source specify kar raha hai -->
+    Your browser does not support the video tag.  <!-- Agar browser video tag ko support nahi karta, toh yeh message dikhana hai -->
+  </video>
+
+  <button class="send-btn" id="sendBtn">💬 Chat</button>  <!-- Chat button jo chatbot ko open karega -->
+
+  <div class="chatbot-window" id="chatbotWindow">  <!-- Chatbot window ka container -->
+    <div class="chatbot-header">Aetmaad Chatbot</div>  <!-- Chatbot ka header -->
+    <div class="chatbot-body" id="chatBody">  <!-- Chat messages display karne wala body -->
+      
+    </div>
+    <div class="chatbot-input">  <!-- Input area jahan user message type karega -->
+      <input type="text" id="chatInput" placeholder="Type a message..." />  <!-- Message input field -->
+      <button id="sendMessageBtn">Send</button>  <!-- Send button jo message bhejega -->
+    </div>
+  </div>
+
+</body>
+</html>
