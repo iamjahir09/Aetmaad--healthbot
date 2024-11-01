@@ -1,84 +1,81 @@
-<!DOCTYPE html> 
-<html lang="en"> 
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon (2).ico') }}" type="image/x-icon">  <!-- Favicon link kar raha hai -->
-    <title>AETMAAD - A Friendly Healthbot Form</title>  
-    <meta name="description" content="A friendly chatbot that recommends medicine according to your disease and helps you purchase it easily."> 
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">  <!-- CSS file link kar raha hai -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon (2).ico') }}">
+    <title>AETMAAD - A Friendly Healthbot Form</title>
+    <meta name="description" content="A friendly chatbot that recommends medicine according to your disease and helps you purchase it easily.">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-    <video autoplay muted loop class="background-video">  <!-- Background video ko autoplay, muted, aur loop par set kar raha hai -->
-        <source src="{{ url_for('static', filename='129731-745175056_tiny.mp4') }}" type="video/mp4">  <!-- Video source specify kar raha hai -->
-        Your browser does not support the video tag.  <!-- Agar browser video tag ko support nahi karta, toh yeh message dikhana hai -->
-    </video>
     
-    <nav class="navbar">  <!-- Navigation bar ka start -->
-        <img src="{{ url_for('static', filename='Aetmaad-Final-logo.png') }}" alt="Aetmaad Logo" class="logo">  <!-- Logo image -->
+
+    <nav class="navbar">
+        <img src="{{ url_for('static', filename='Aetmaad-Final-logo.png') }}" alt="Aetmaad Logo" class="logo">
     </nav>
 
-    <div class="container">  <!-- Form elements ka container -->
+    <div class="container">
         <header>
-            <h1>Welcome to Aetmaad Healthbot</h1>  <!-- Page ka header -->
+            <h1>Welcome to Aetmaad Healthbot</h1>
         </header>
-        <h3>Please fill the form to continue</h3>  <!-- Form fill karne ka message -->
-        <form id="userForm">  <!-- Form ka start -->
-            <div class="form-container">  <!-- Form container -->
-                <div class="form-group">  <!-- Form group for client name -->
-                    <label for="clientName">Client Name</label>  <!-- Label for client name -->
-                    <input type="text" id="clientName" placeholder="Enter your name here" required>  <!-- Input field for client name -->
+        <h3>Please fill the form to continue</h3>
+        <form id="userForm">
+            <div class="form-container">
+                <div class="form-group">
+                    <label for="clientName">Client Name</label>
+                    <input type="text" id="clientName" placeholder="Enter your name here" required>
                 </div>
-                <div class="form-group">  <!-- Form group for counsellor name -->
-                    <label for="counsellorName">Counsellor Name</label>  <!-- Label for counsellor name -->
-                    <input type="text" id="counsellorName" placeholder="Enter counsellor's name" required>  <!-- Input field for counsellor name -->
+                <div class="form-group">
+                    <label for="counsellorName">Counsellor Name</label>
+                    <input type="text" id="counsellorName" placeholder="Enter counsellor's name" required>
                 </div>
-                <div class="form-group">  <!-- Form group for mobile number -->
-                    <label for="mobile">Mobile Number</label>  <!-- Label for mobile number -->
-                    <input type="tel" id="mobile" placeholder="Enter 10 digit mobile number" pattern="[0-9]{10}" required>  <!-- Input field for mobile number with pattern validation -->
+                <div class="form-group">
+                    <label for="mobile">Mobile Number</label>
+                    <input type="tel" id="mobile" placeholder="Enter 10 digit mobile number" pattern="[0-9]{10}" required>
                 </div>
-                <div class="form-group">  <!-- Form group for height -->
-                    <label>Height</label>  <!-- Label for height -->
-                    <input type="number" id="feet" placeholder="Feet" required style="width: 60px; margin-right: 10px;">  <!-- Input for feet -->
-                    <input type="number" id="inches" placeholder="Inches" required style="width: 60px;">  <!-- Input for inches -->
+                <div class="form-group">
+                    <label>Height</label>
+                    <input type="number" id="feet" placeholder="Feet" required style="width: 60px; margin-right: 10px;">
+                    <input type="number" id="inches" placeholder="Inches" required style="width: 60px;">
                 </div>
-                <div class="form-group">  <!-- Form group for weight -->
-                    <label for="weight">Weight (in kg)</label>  <!-- Label for weight -->
-                    <input type="number" id="weight" placeholder="Enter your weight" required>  <!-- Input field for weight -->
+                <div class="form-group">
+                    <label for="weight">Weight (in kg)</label>
+                    <input type="number" id="weight" placeholder="Enter your weight" required>
                 </div>
-                <div class="form-group">  <!-- Form group for age -->
-                    <label for="age">Age</label>  <!-- Label for age -->
-                    <input type="number" id="age" placeholder="Enter your age" required>  <!-- Input field for age -->
+                <div class="form-group">
+                    <label for="age">Age</label>
+                    <input type="number" id="age" placeholder="Enter your age" required>
                 </div>
-                <div class="form-group">  <!-- Form group for sleep time -->
-                    <label for="sleepTime">Sleep Time</label>  <!-- Label for sleep time -->
-                    <input type="time" id="sleepTime" required>  <!-- Input field for sleep time -->
+                <div class="form-group">
+                    <label for="sleepTime">Sleep Time</label>
+                    <input type="time" id="sleepTime" required>
                 </div>
-                <div class="form-group">  <!-- Form group for wake time -->
-                    <label for="wakeTime">Wake Time</label>  <!-- Label for wake time -->
-                    <input type="time" id="wakeTime" required>  <!-- Input field for wake time -->
+                <div class="form-group">
+                    <label for="wakeTime">Wake Time</label>
+                    <input type="time" id="wakeTime" required>
                 </div>
-                <div class="form-group">  <!-- Form group for location -->
-                    <label for="location">Location</label>  <!-- Label for location -->
-                    <input type="text" id="location" placeholder="Enter your location" required>  <!-- Input field for location -->
+                <div class="form-group">
+                    <label for="location">Location</label>
+                    <input type="text" id="location" placeholder="Enter your location" required>
                 </div>
-                <div class="form-group">  <!-- Form group for marital status -->
-                    <label>Marital Status</label>  <!-- Label for marital status -->
-                    <input type="radio" name="maritalStatus" id="married" value="Married"> Married  <!-- Radio button for married status -->
-                    <input type="radio" name="maritalStatus" id="unmarried" value="Unmarried" checked> Unmarried  <!-- Radio button for unmarried status -->
+                <div class="form-group">
+                    <label>Marital Status</label>
+                    <input type="radio" name="maritalStatus" id="married" value="Married"> Married
+                    <input type="radio" name="maritalStatus" id="unmarried" value="Unmarried" checked> Unmarried
                 </div>
-                <div class="form-group">  <!-- Form group for genetic disorder -->
-                    <label>Do you have any genetic disorder?</label>  <!-- Label for genetic disorder question -->
-                    <input type="radio" name="genetic_disorder" id="yes" onclick="toggleDisorderInput()"> Yes  <!-- Yes radio button -->
-                    <input type="radio" name="genetic_disorder" id="no" checked onclick="toggleDisorderInput()"> No  <!-- No radio button -->
-                    <input type="text" id="disorder" placeholder="Please specify your genetic disorder" style="display: none;">  <!-- Input field for specifying disorder, hidden by default -->
+                <div class="form-group">
+                    <label>Do you have any genetic disorder?</label>
+                    <input type="radio" name="genetic_disorder" id="yes" onclick="toggleDisorderInput()"> Yes
+                    <input type="radio" name="genetic_disorder" id="no" checked onclick="toggleDisorderInput()"> No
+                    <input type="text" id="disorder" placeholder="Please specify your genetic disorder" style="display: none;">
                 </div>
             </div>
-            <input type="submit" value="Submit">  <!-- Submit button for the form -->
+            <input type="submit" value="Submit">
         </form>
-        <h2 class="thank-you" style="display:none;">Thank you for filling the form! Hope you will find a cure for your disease.</h2>  <!-- Thank you message, hidden by default -->
+        <h2 class="thank-you" style="display:none;">Thank you for filling the form! Hope you will find a cure for your disease.</h2>
     </div>
 
-    <script src="{{ url_for('static', filename='script.js') }}"></script>  <!-- JavaScript file link -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>

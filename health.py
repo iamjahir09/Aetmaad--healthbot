@@ -18,11 +18,26 @@ except Exception as e:
 
 # Illness ko corresponding products ke saath map karne wala dictionary
 problem_to_dawai = {
-    "cough": ("Marzanjosh", "https://aetmaad.co.in/product/al-marzanjosh/"),
-    "malaria": ("Sanna Makki", "https://aetmaad.co.in/product/sanna-makki/"),
-    "blood pressure": ("Qalbi Nuska", "https://aetmaad.co.in/product/qalbi-nuska/"),
-    "joint pain": ("Rumabil", "https://aetmaad.co.in/product/rumabil/"),
-    "ulcers": ("Al-Rehan", "https://aetmaad.co.in/product/al-rehan/")
+   "cough": ("Marzanjosh", "https://aetmaad.co.in/product/al-marzanjosh", 300), 
+    "malaria": ("Sanna Makki", "https://aetmaad.co.in/product/sanna-makki", 70), 
+    "constipation": ("Sanna Makki", "https://aetmaad.co.in/product/sanna-makki", 70),  
+    "peristalsis": ("Sanna Makki", "https://aetmaad.co.in/product/sanna-makki", 70),  
+    "piles": ("Sanna Makki", "https://aetmaad.co.in/product/sanna-makki", 70),  
+    "dysentery": ("Sanna Makki", "https://aetmaad.co.in/product/sanna-makki", 70), 
+    "hepatomegaly": ("Sanna Makki", "https://aetmaad.co.in/product/sanna-makki", 70),  
+    "spleenomegaly": ("Sanna Makki", "https://aetmaad.co.in/product/sanna-makki", 70), 
+    "jaundice": ("Sanna Makki", "https://aetmaad.co.in/product/sanna-makki", 70),  
+    "gouts": ("Sanna Makki", "https://aetmaad.co.in/product/sanna-makki", 70),  
+    "rheumatism": ("Sanna Makki", "https://aetmaad.co.in/product/sanna-makki", 70),  
+    "anaemia": ("Sanna Makki", "https://aetmaad.co.in/product/sanna-makki", 70),  
+    "blood pressure": ("Qalbi Nuska", "https://aetmaad.co.in/product/qalbi-nuska", 600),  
+    "joint pain": ("Rumabil", "https://aetmaad.co.in/product/rumabil", 300),  
+    "ulcers": ("Al-Rehan", "https://aetmaad.co.in/product/al-rehan", 300), 
+    "sore throats": ("Multi Flora Honey", "https://aetmaad.co.in/product/multi-flora-honey", 600), 
+    "skin irritations": ("Multi Flora Honey", "https://aetmaad.co.in/product/multi-flora-honey", 600),
+    "hair loss": ("Tulsi Honey", "https://aetmaad.co.in/product/tulsi-honey", 600), 
+    "infections": ("Tulsi Honey", "https://aetmaad.co.in/product/tulsi-honey", 600),
+    "fever": ("Tulsi Honey", "https://aetmaad.co.in/product/tulsi-honey", 600) 
 }
 
 @app.route('/')  # Home page ka route
@@ -46,10 +61,7 @@ def get_response():
             f"Hello {request.args.get('name', 'User')}! How can I assist you today?",  # English greeting
             f"Hi {request.args.get('name', 'User')}! What can I do for you?",  # Another English greeting
         ],
-        'hi': [
-            f"नमस्ते {request.args.get('name', 'User')}! मैं आपकी कैसे मदद कर सकता हूँ?",  # Hindi greeting
-            f"नमस्ते {request.args.get('name', 'User')}! मैं आपकी सहायता के लिए यहाँ हूँ।",  # Another Hindi greeting
-        ],
+        
     }
     
     greeting_message = random.choice(greetings.get(lang, greetings['en']))  # Detected language ke hisaab se greeting select kar raha hai
